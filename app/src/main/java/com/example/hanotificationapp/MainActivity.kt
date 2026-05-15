@@ -1,4 +1,4 @@
-package com.example.webviewapp
+package com.example.hanotificationapp
 
 import android.content.Intent
 import android.content.SharedPreferences
