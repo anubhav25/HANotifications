@@ -1,0 +1,15 @@
+services:
+  noti:
+    build: .
+    ports:
+      - "9000:9000"
+    environment:
+      - SERVICE_URL=http://192.168.0.11:9000
+      - HA_URL=http://192.168.0.222:8123
+      - HA_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjY2I5OTc5NzQxY2I0MWRjYjkyZmI5ODExZjFlZjFhYSIsImlhdCI6MTc3ODc1NDA1OSwiZXhwIjoyMDk0MTE0MDU5fQ.BqLV3WUpUS4ZYfkTQUNB1ksepagHa7B6BRyfT4cBZ88
+    volumes:
+      - uploads:/app/uploads
+    restart: unless-stopped
+
+volumes:
+  uploads:
